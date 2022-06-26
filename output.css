@@ -489,8 +489,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .list-theme{
   --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
+  color: white;
   transition-duration: 200ms;
+  letter-spacing: 0.5px;
+  font-weight: 200;
 }
 
 .list-theme:hover{
