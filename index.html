@@ -2,117 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet">
-    
     <title>Tanvir Deol</title>
-</head>
-<body id="main" class="bg-indigo-500 text-black transition-all duration-500" onload="fadeIn()"
-    style="background-image: linear-gradient(rgb(0, 0, 0), rgb(1, 0, 41));">
-    <div id="wrapper">
-    <div class="font-body text-xl font-normal flex flex-row fixed min-w-full bg-gradient-to-b from-black">
-        <div class="p-4 basis-1/2">
-            <a class="underline-fade" >Tanvir Deol</a>
-        </div>
-        <div class="p-4 basis-1/2 flex flex-row gap-x-8 justify-end">
-            <a class="underline-fade" href="#about">About</a>
-            <a class="underline-fade" href="#projects">Projects</a>
-            <a class="underline-fade" href="#cool_stuff">Cool Stuff</a>
-        </div>
-    </div>
-
-    <div class=" flex flex-row items-center text-center h-screen">
-        <div class="basis-1/2 ">
-            <p class="text-7xl font-body font-semibold transition-all tracking-normal duration-500 hover:tracking-wide"
-             id="name_title" >Hi, I'm Tanvir. </p>
-        </div>
-        <div  class="basis-1/2 text-xl font-body font-normal ">
-            <a target="_blank" href="https://drive.google.com/file/d/1c8bKU6W73di8fI00kwCBcCTbB9l-6o4W/view?usp=sharing" id="resume_link" class="underline-fade text-xs text-black transition-all duration-500"> Resume</a><br>
-            <a target="_blank" href="https://github.com/TanvirDeol" id="github_link" class="underline-fade  text-xs text-black transition-all duration-500">GitHub</a><br>
-            <a target="_blank" href="https://www.linkedin.com/in/tanvir-deol-42589b212/" id="linkedin_link" class="underline-fade text-xs text-black transition-all duration-500">LinkedIn</a><br>
-            <a target="_blank" href="mailto:tanvirdeol31@gmail.com" id="email_link" class="underline-fade text-xs text-black transition-all duration-500">Email</a>
-        </div>
-    </div>
-
-    <div class="flex flex-row justify-center text-center h-fit " id="about">
-        <p class="text-lg font-body max-w-5xl" style="font-weight: 300; letter-spacing: 0.5px;">I'm a Mathematics major at the University of Waterloo, interested
-            in software development and data science. <br> This fall, I will interning
-            as a software developer at Huawei in their R&D labs. <br> <br>
-            Previously I have done back-to-back internships at Cynorix working on blockchain integration and full-stack development. <br>
-            Here I was given many advancement opportunities such as doing a URA on Ethereum gossip protocols under the guidance of Dr. Amir Khandani.
-            Working here has undoubtedly helped my career. 
-            
-            <br> <br>
-            Feel free to contact me via Email/LinkedIn, I'm happy to respond to any questions or help out.
-        </p>
-    </div>
-    <p class="text-4xl font-body font-semibold text-center p-8">Projects</p>
-    
-    <div class="flex flex-row justify-center items-center" id="projects">
-        <button class="p-4 list-theme text-4xl" onclick="change_image(-1)" > ⏴</button>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #333;
+        }
         
-        <div class="max-w-sm rounded-lg border border-gray-200 shadow-md bg-gray-900 dark:border-gray-700">
-            <a href="#">
-            <img class="rounded-t-lg" id="proj_image" src="https://user-images.githubusercontent.com/55645993/153707497-778678d6-3baf-4e00-af3b-0dfbea4aea67.png" alt="">
-            </a>
-            <div class="p-5">
-            <a href="#">
-            <h5 class="mb-2 text-2xl font-bold text-white" id="proj_title">Video Lecture Assistant</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400" id="proj_desc">1st Place Winner UW DSC X CSC 2021 🏆 Search Relevant Timeframes in Video Lectures</p>
-            <a href="https://github.com/TanvirDeol/Video-Lecture-Assistant" target="_blank" id="proj_link" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            View on GitHub
-            <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
-            </div>
-        </div>
-        <p class="p-4 list-theme text-4xl" onclick="change_image(1)"> ⏵</p>
-    </div>
-    <div id="dots" class="text-center text-2xl flex flex-row justify-center p-4">
-    </div>
-    <br><br><br><br><br><br>
-    
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        h2 {
+            font-weight: 500;
+            margin: 30px 0 15px;
+        }
+        
+        .social-links {
+            margin: 0px 0;
+        }
+        
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        .notes {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .bullet-list li::before {
+            content: "• ";
+        }
+    </style>
+</head>
+<body>
+    <h1>Tanvir Deol</h1>
 
+    <h2>About</h2>
+    <p>
+        I'm a Math/Stats major at the University of Waterloo, interested in crypto, startups, finance, and marketing.
+        This winter I'm on the smart contracts team at Axelar, and this summer I'll be at Faire as a software engineer intern.
+    </p>
 
-    <div class="flex flex-row justify-center text-center p-8 font-body" id="cool_stuff">
-        <div class="basis-1/2">
-            <p class="text-xl font-semibold">Awards</p>
-            <ul>
-                <li class="list-theme p-2">Awarded NSERC Undergrad Research Award (Worth $6,000)</li>
-                <li class="list-theme p-2">1st Place at UW DSC X CSC Project Program Hackathon 2021 <i>(Solo)</i></li>
-                <li class="list-theme p-2">Most Efficient Code Design Winner at StemFEST 2021</li>
-                <li class="list-theme p-2">Ontario Principal's Council Award for Leadership <i>(Awarded to One)</i></li>
-                <li class="list-theme p-2">Top 6% at Canadian Computing Competition 2021 <i>(Distinction at 25%)</i></li>
-                <li class="list-theme p-2">Excellence Award in Computer Science (11 and 12), Physics (11) and Law (11) </li>
-                <li class="list-theme p-2">Junior Achievement Finalist for President of the Year</li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex flex-row justify-center text-center p-8">
-        <div class="basis-1/2">
-            <p class="text-xl font-semibold">Misc.</p>
-            <ul>
-                
-                <li class="list-theme p-2"><a target="_blank" href="https://docs.google.com/presentation/d/1TrXEWhAyfW4sNiPZQhxELtcHNs-B1w4-UxYtaRqqDik/edit?usp=sharing">🔗 Slides for a Talk I Gave to my High School's Math/CS Club <i>(As an Alumnus)</i></a></li>
-                <li class="list-theme p-2"><a target="_blank" href="https://www.sharethesmile.ca/Stories/Peel-students-code-solutions-to-social-distancing-challenges">🔗 News Article on a Hackathon I Co-organized</a></li>
-                <li class="list-theme p-2"><a target="_blank" href="https://www.schulichleaders.com/tanvir-deol">🔗 Nominee for the Schulich Leader Scholarship</a> </li>
-                <li class="list-theme p-2"><a target="_blank" href="https://codeforces.com/profile/tanvirdeol">🔗 My Competitive Programming Profile (Could be Better)</a></li>  
-            </ul>
-        </div>
-        <div class="basis-1/2">
-            <p class="text-xl font-semibold">Resources</p>
-            <ul>
-                <li class="list-theme p-2" ><a target="_blank" href="http://paulgraham.com/articles.html">🔗 Paul Graham's Essays <i>- worth reading</i></a></li>
-                <li class="list-theme p-2"><a target="_blank" href="https://cses.fi/book/book.pdf">🔗 Competitive Programmer's Handbook <i>- really well written and concise</i></a></li>
-                <li class="list-theme p-2"><a target="_blank" href="https://clist.by/">🔗 CLIST <i>- stay up to date on competitions/datathons</i></a></li>
-            </ul>
-        </div>
-    </div>
+    <h2>What I'm Working On</h2>
+    <ul class="bullet-list">
+        <li><a href="https://fastclipapp.com/">FastClip</a> - Use AI to insert B-rolls in your Tiktoks/Reels to make them more engaging</li>
+        <li><a href="https://www.ivgreeks.com/">Crypto Option Chain Analyzer</a> - Analyze crypto options using volatility analysis (IV vs HV) and option greeks</li>
      
-    <a class="font-body text-xs text-slate-600" href='https://www.freepik.com/vectors/abstract-background'>Abstract background vector created by vector_corp - www.freepik.com</a>
-    </div>
-    <script type="text/javascript" src="logic.js"></script>
-</body>
+    </ul>
 
+    <h2>Experience</h2>
+    <ul class="bullet-list">
+        <li><b>Faire</b> - Will be here in the summer.</li>
+        <li><b>Axelar Network</b> - Working on cross-chain messaging smart contracts in Rust</li>
+        <li><b>Huawei Technologies R&D</b> - Worked on blockchain attack detection, and filed a first-author patent.</li>
+        <li><b>Cynorix</b> - Designed an blockchain-based trustless voting system</li>
+        <li><b>University of Waterloo (URA)</b> - analyzed scalability bottlenecks in the Ethereum network</li>
+    </ul>
+
+    <h2>Find me on</h2>
+    <div class="social-links">
+        <a href="https://github.com/TanvirDeol">Github</a> · 
+        <a href="https://www.linkedin.com/in/tanvir-deol-42589b212/">LinkedIn</a>
+    </div>
+
+    <div class="notes">
+        <p>tanvirdeol31@gmail.com<br></p>
+    </div>
+</body>
 </html>
